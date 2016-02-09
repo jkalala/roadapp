@@ -42,7 +42,7 @@
          $found_user = $database->fetch_array($result_set);
          $_SESSION['user_id'] = $found_user['ID'];
          $_SESSION['usuario'] = $found_user['usuario'];
-          redirect_to ("index.php");
+          redirect_to ("index.html");
     
        } else {
 
