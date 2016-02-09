@@ -8,6 +8,7 @@
 } 
  return $field_errors;
 }
+
 function check_max_field_lengths($field_length_array){
  $field_errors = array();
  $field_length_array = array();
@@ -17,9 +18,9 @@ function check_max_field_lengths($field_length_array){
  foreach($field_length_array as $fieldname =>$maxlength ) {
     if (strlen(trim(mysql_prep($_POST[$fieldname]))) > $maxlength) {
 $field_errors[] = $fieldname; }
-}
+    }
  return $field_errors;
-}
+  }
 }
 
 function display_errors($error_array){
