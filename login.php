@@ -33,13 +33,13 @@
        $query .= "WHERE usuario = '{$usuario}'";
        $query .= "AND hashed_password = '{$hashed_password}'";
        $query .= "LIMIT 1";
-       $result_set = mysqli_query($query);
-       confirm_query($result_set);
-       if (mysql_num_rows($result_set) ==1) {
+       $result_set = $database->query($query);
+        confirm_query($result_set);
+       if ($database->num_rows($result_set) ==1) {
            
         // username/password authenticated
         // and only 1 match
-         $found_user = mysql_fetch_array($result_set);
+         $found_user = $database->fetch_array($result_set);
          $_SESSION['user_id'] = $found_user['ID'];
          $_SESSION['usuario'] = $found_user['usuario'];
           redirect_to ("index.php");
