@@ -90,28 +90,6 @@
 </head>
 <body>
 	
-		<form action="login.php" method="POST" >
-
-		
-		
-				<p>
-					<label for="login-username">Usuario</label>
-					<input type="text"  name="nome" value="<?php echo htmlentities($usuario); ?>"  autofocus />
-				</p>
-
-				<p>
-					<label for="login-password">Palavra-passe</label>
-					<input type="password"  name="senha" value="<?php echo htmlentities($senha); ?>"  />
-				</p>
-				
-				<p><a href="#">Esqueceste-te da tua palavara-passe?</a>.</p>
-				
-				<input type="submit" name="submit" value= "Iniciar sessão"   />
-
-	
-
-		
-		</form>
 		
 		
 <div id="wrapper">
