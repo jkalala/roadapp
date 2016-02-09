@@ -1,13 +1,13 @@
-<?php require_once("../../includes/session.php");?>
-<?php require_once("../../includes/database.php");?>
-<?php require_once("../../includes/functions.php"); ?>
+<?php require_once("session.php");?>
+<?php require_once("database.php");?>
+<?php require_once("functions.php"); ?>
 <?php 
 
 if ($session->is_logged_in()) {
-     redirect_to("dashboard.php");
+     redirect_to("index.php");
   }
 
-     include_once("../../includes/form_functions.php");
+     include_once("form_functions.php");
  
      // VALIDAR FORMULARIO 
      if (isset($_POST['submit'])) { // formulario foi enviado
@@ -78,88 +78,33 @@ if ($session->is_logged_in()) {
 	<meta charset="utf-8">
 	<title>Admin - Login ao SISTEMA</title>
 	
-	<!-- Stylesheets -->
-	<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet'>
-	<link rel="stylesheet" href="css/style.css">
-
-	<!-- Optimize for mobile devices -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>  
+ 
 </head>
 <body>
-
-	<!-- TOP BAR -->
-	<div id="top-bar">
+	
+		<form action="login.php" method="POST" >
 		
-		<div class="page-full-width">
 		
-			<a href="../../includes/outputhorario.php" class="round button dark ic-left-arrow image-left ">Consultar Horário</a>
-
-		</div> <!-- end full-width -->	
-	
-	</div> <!-- end top-bar -->
-	
-	
-	
-	<!-- HEADER -->
-	<div id="header">
-		
-		<div class="page-full-width cf">
-	
-			<div id="login-intro" class="fl">
-			
-				<h1>Sistema de Construção de Horários</h1>
-				<h5>Entrar os teus credenciais de administrador abaixo</h5>
-			
-			</div> <!-- login-intro -->
-			
-			<!-- Change this image to your own company's logo -->
-			<!-- The logo will automatically be resized to 39px height. -->
-			<a href="#" id="company-branding" class="fr"><img src="" alt="" /></a>
-			
-		</div> <!-- end full-width -->	
-
-	</div> <!-- end header -->
-	
-	
-	
-	<!-- MAIN CONTENT -->
-	<div id="content">
-	
-		<form action="login2.php" method="POST" id="login-form">
-		
-			<fieldset>
-
 				<p>
 					<label for="login-username">Usuário</label>
-					<input type="text" id="login-username" name="usuario" value="<?php echo htmlentities($usuario); ?>" class="round full-width-input" autofocus />
+					<input type="text"  name="usuario" value="<?php echo htmlentities($usuario); ?>"  autofocus />
 				</p>
 
 				<p>
 					<label for="login-password">Palavra-passe</label>
-					<input type="password" id="login-password" name="senha" value="<?php echo htmlentities($senha); ?>" class="round full-width-input" />
+					<input type="password"  name="senha" value="<?php echo htmlentities($senha); ?>"  />
 				</p>
 				
 				<p><a href="#">Esqueceste-te da tua palavara-passe?</a>.</p>
 				
-				<input type="submit" name="submit" value= "Iniciar sessão" class="button round blue image-right ic-right-arrow"   />
+				<input type="submit" name="submit" value= "Iniciar sessão"   />
 
-			</fieldset>
+	
 
-			<br/><div class="information-box round">Clica apenas no botão "INICIAR SESSÃO" para continuar.</div>
-
+		
 		</form>
 		
-	</div> <!-- end content -->
-	
-	
-	
-	<!-- FOOTER -->
-	<div id="footer">
 
-		<p>&copy; Copyright 2013 <a href="#">Joaquim Kalala</a>. Todos os direitos reservados.</p>
-		<p><strong>Sistema de Construção de Horários</strong> desenhado por <a href="http://www.adipurdila.com">Joaquim Kalala</a></p>
-	
-	</div> <!-- end footer -->
 
 </body>
 </html>
