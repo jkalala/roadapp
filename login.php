@@ -77,7 +77,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Admin - Login ao SISTEMA</title>
+	<title>Sistema de Contraordernacao</title>
 	
 	
 </head>
@@ -95,7 +95,7 @@
 		
 				<p>
 					<label for="login-username">Usuário</label>
-					<input type="text"  name="usuario" value="<?php echo htmlentities($usuario); ?>"  autofocus />
+					<input type="text"  name="usuario" value="<?php echo htmlentities($nome); ?>"  autofocus />
 				</p>
 
 				<p>
