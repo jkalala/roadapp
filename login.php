@@ -30,7 +30,7 @@
        // check database to see if username and the hashed password exist there.
        $query = "SELECT ID , usuario ";
        $query .= "FROM usuarios ";
-       $query .= "WHERE usuario = '{$nome}'";
+       $query .= "WHERE usuario = '{$usuario}'";
        $query .= "AND hashed_password = '{$hashed_password}'";
        $query .= "LIMIT 1";
        $result_set = mysql_query($query);
