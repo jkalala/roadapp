@@ -1,16 +1,14 @@
 ﻿
-<?php require_once("session.php");?>
 
 
 <?php require_once("database.php");?>
 <?php require_once("functions.php"); ?>
+<?php require_once("form_functions.php"); ?>
+
 <?php 
 
-if ($session->is_logged_in()) {
-     redirect_to("index.php");
-  }
 
-     include_once("form_functions.php");
+
  
      // VALIDAR FORMULARIO 
      if (isset($_POST['submit'])) { // formulario foi enviado
@@ -86,7 +84,7 @@ if ($session->is_logged_in()) {
 <body>
 
 	
-=======
+
  
 </head>
 <body>
