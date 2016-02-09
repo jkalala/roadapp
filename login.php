@@ -116,17 +116,17 @@
 		
 <div id="wrapper">
 
-	<form name="login-form" class="login-form" action="" method="post">
+	<form name="login-form" class="login-form" action="login.php" method="post">
 	
 		<div class="header">
 		<h1>Login Form</h1>
-		<span>Fill out the form below to login to my super awesome imaginary control panel.</span>
+		<span>Prencha o formulario abaixo para entrar.</span>
 		</div>
 	
 		<div class="content">
-		<input name="username" type="text" class="input username" placeholder="Username" />
+		<input name="nome" type="text" class="input username" placeholder="Usuario" />
 		<div class="user-icon"></div>
-		<input name="password" type="password" class="input password" placeholder="Password" />
+		<input name="senha" type="password" class="input password" placeholder="Senha" />
 		<div class="pass-icon"></div>		
 		</div>
 
