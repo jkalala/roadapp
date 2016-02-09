@@ -66,7 +66,7 @@
        $message ="You are now loggout";
         }
 
-       $nome = "";
+       $usuario = "";
        $senha = "";
        }
 ?>
