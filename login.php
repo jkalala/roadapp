@@ -42,7 +42,7 @@
          $found_user = mysql_fetch_array($result_set);
          $_SESSION['user_id'] = $found_user['ID'];
          $_SESSION['usuario'] = $found_user['usuario'];
-          redirect_to ("dashboard.php");
+          redirect_to ("index.php");
     
        } else {
 
@@ -89,7 +89,7 @@
 </head>
 <body>
 	
-		<form action="https://localhost/roadapp/roadapp/login.php" method="POST" >
+		<form action="login.php" method="POST" >
 
 		
 		
