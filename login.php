@@ -94,8 +94,8 @@
 		
 		
 				<p>
-					<label for="login-username">Usuário</label>
-					<input type="text"  name="usuario" value="<?php echo htmlentities($nome); ?>"  autofocus />
+					<label for="login-username">Usuario</label>
+					<input type="text"  name="nome" value="<?php echo htmlentities($nome); ?>"  autofocus />
 				</p>
 
 				<p>
