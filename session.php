@@ -44,4 +44,8 @@ if($this->logged_in){
 }
 $session = new Session();
 
+<<<<<<< HEAD
 ?>
+=======
+?>
+>>>>>>> 39b4b64dcb331aff3fcbcd20ee1412da2961a3ee
