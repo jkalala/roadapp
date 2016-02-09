@@ -16,13 +16,13 @@
 
       // validar os dados do formulario
 
-       $required_fields = array('usuario', 'senha');
+       $required_fields = array('nome', 'senha');
        $errors = array_merge($errors, check_required_fields($required_fields, $_POST));
 
-       $fields_with_lengths = array('usuario' => 30, 'senha' => 30);
+       $fields_with_lengths = array('nome' => 30, 'senha' => 30);
        $errors = array_merge($errors, check_max_field_lengths($fields_with_lengths, $_POST));
     
-       $usuario =trim(mysql_prep($_POST['usuario']));
+       $usuario =trim(mysql_prep($_POST['nome']));
        $senha =trim(mysql_prep($_POST['senha']));
        $hashed_password = sha1($senha);
       
@@ -30,7 +30,7 @@
        // check database to see if username and the hashed password exist there.
        $query = "SELECT ID , usuario ";
        $query .= "FROM usuarios ";
-       $query .= "WHERE usuario = '{$usuario}'";
+       $query .= "WHERE usuario = '{$nome}'";
        $query .= "AND hashed_password = '{$hashed_password}'";
        $query .= "LIMIT 1";
        $result_set = mysql_query($query);
@@ -66,7 +66,7 @@
        $message ="You are now loggout";
         }
 
-       $usuario = "";
+       $nome = "";
        $senha = "";
        }
 ?>
