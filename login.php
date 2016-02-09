@@ -1,13 +1,13 @@
-<?php require_once("../../includes/session.php");?>
-<?php require_once("../../includes/database.php");?>
-<?php require_once("../../includes/functions.php"); ?>
+﻿<?php require_once("session.php");?>
+<?php require_once("database.php");?>
+<?php require_once("functions.php"); ?>
 <?php 
 
 if ($session->is_logged_in()) {
-     redirect_to("dashboard.php");
+     redirect_to("index.php");
   }
 
-     include_once("../../includes/form_functions.php");
+     include_once("form_functions.php");
  
      // VALIDAR FORMULARIO 
      if (isset($_POST['submit'])) { // formulario foi enviado
@@ -81,27 +81,11 @@ if ($session->is_logged_in()) {
 	<!-- Stylesheets -->
 	<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet'>
 	<link rel="stylesheet" href="css/style.css">
-
-	<!-- Optimize for mobile devices -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>  
+  
 </head>
 <body>
 
-	<!-- TOP BAR -->
-	<div id="top-bar">
-		
-		<div class="page-full-width">
-		
-			<a href="../../includes/outputhorario.php" class="round button dark ic-left-arrow image-left ">Consultar Horário</a>
-
-		</div> <!-- end full-width -->	
 	
-	</div> <!-- end top-bar -->
-	
-	
-	
-	<!-- HEADER -->
-	<div id="header">
 		
 		<div class="page-full-width cf">
 	
