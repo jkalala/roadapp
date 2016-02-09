@@ -1,6 +1,6 @@
 <?php require_once("../../includes/session.php");?>
 <?php require_once("../../includes/database.php");?>
-<?php require_once("../../includes/functions2.php"); ?>
+<?php require_once("../../includes/functions.php"); ?>
 <?php 
 
 if ($session->is_logged_in()) {
