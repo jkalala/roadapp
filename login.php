@@ -33,7 +33,7 @@
        $query .= "WHERE usuario = '{$usuario}'";
        $query .= "AND hashed_password = '{$hashed_password}'";
        $query .= "LIMIT 1";
-       $result_set = mysql_query($query);
+       $result_set = mysqli_query($query);
        confirm_query($result_set);
        if (mysql_num_rows($result_set) ==1) {
            
