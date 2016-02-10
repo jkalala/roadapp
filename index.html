@@ -8,7 +8,7 @@
 <meta name="robots" content="index,follow"/>
 <base href="http://localhost/html"/>
 <script src="javascript.js"></script>
-<link rel="stylesheet" href="syle.css"/>
+<link rel="stylesheet" href="styles.css"/>
 
 <link rel="icon" href="favicon.ico" />
 
@@ -26,7 +26,8 @@
 </a>
 </header>
 
-<nav id="horzNav">
+<nav id="nav">
+
 
   <p>
     <a href="www.google.com">Google</a>
@@ -36,30 +37,113 @@
  <main id="content">
     
 
- 
-<form metho="POST" action="login.php">
+       <nav id="nav">
 
-Nome :<input type="text" name="nome" ><br>
+	    <ul id="navigation">
 
-Senha: <input type"password" name="senha"><br>
+	        <li><a href="#" class="first">Home</a></li>
 
-<input type="submit" name="submit" value="Submit">
+	        <li><a href="#">Services &raquo;</a>
 
-<input type="reset" value="Reset">
+	            <ul>
 
-</form>
+	                <li><a href="#">Web Development</a></li>
 
+
+	                <li><a href="#">Logo Design</a></li>
+
+	                <li><a href="#">Identity & Branding &raquo;</a>
+
+	                    <ul>
+
+	                        <li><a href="#">Business Cards</a></li>
+
+	                        <li><a href="#">Brochures</a></li>
+
+	                        <li><a href="#">Envelopes</a></li>
+
+	                        <li><a href="#">Flyers</a></li>
+
+	                    </ul>                 
+
+	                </li>                 
+
+	                <li><a href="#">Wordpress</a></li>
+
+	            </ul>
+
+	        </li>
+
+	        <li><a href="#">Portfolio &raquo;</a>
+
+	            <ul>
+
+	                <li><a href="#">Graphic Design</a></li>
+
+	                <li><a href="#">Photography</a></li>
+
+	                <li><a href="#">Architecture</a></li>
+
+	                <li><a href="#">Calligraphy</a></li>
+
+	                <li><a href="#">Film &raquo;</a>
+
+	                    <ul>
+
+	                        <li><a href="#">John Carter</a></li>
+
+
+
+	                        <li><a href="#">The Avengers</a></li>
+
+	                        <li><a href="#">The Amazing SpiderMan</a></li>
+
+	                        <li><a href="#">Madagascar 3</a></li>
+
+	                    </ul>                     
+
+	                </li>
+
+	                <li><a href="#">Graffity </a></li>
+
+	            </ul>             
+
+	        </li>
+
+	        <li><a href="#">Testimonials</a></li>
+
+	        <li><a href="#">Blog</a></li>
+
+	        <li><a href="#" class="last">Contact</a></li>
+
+	    </ul>
+
+	</nav>
+	
 
 <form class="contact_form" action="#" method="post" name="contact_form">
     <ul>
         <li>
-             <h2>Contact Us</h2>
-             <span class="required_notification">* Denotes Required Field</span>
+             <h2>Sinistro</h2>
+            
         </li>
         <li>
-            <label for="name">Name:</label>
+            <label for="name">Numero da carta:</label>
             <input type="text"  placeholder="John Doe" required />
         </li>
+        
+        <li>
+            <label for="name">Marca da viatura:</label>
+            <input type="text"  placeholder="John Doe" required />
+        </li>
+        
+        
+        <li>
+            <label for="name">Numero da carta:</label>
+            <input type="text"  placeholder="John Doe" required />
+        </li>
+        
+    
         <li>
             <label for="email">Email:</label>
             <input type="email" name="email" placeholder="john_doe@example.com" required />

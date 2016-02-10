@@ -1,432 +1,150 @@
-@import url(http://fonts.googleapis.com/css?family=Bree+Serif);
 
-/*******************
-SELECTION STYLING
-*******************/
 
-::selection {
-	color: #fff;
-	background: #f676b2; /* Safari */
+/* === Remove input autofocus webkit === */
+*:focus {outline: none;}
+
+/* === Form Typography === */
+body {font: 14px/21px "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;}
+.contact_form h2, .contact_form label {font-family:Georgia, Times, "Times New Roman", serif;}
+.form_hint, .required_notification {font-size: 11px;}
+
+/* === List Styles === */
+.contact_form ul {
+    width:750px;
+    list-style-type:none;
+	list-style-position:outside;
+	margin:0px;
+	padding:0px;
 }
-::-moz-selection {
-	color: #fff;
-	background: #f676b2; /* Firefox */
-}
-
-/*******************
-BODY STYLING
-*******************/
-
-* {
-	margin: 0;
-	padding: 0;
-	border: none;
-	outline: none;
-}
-
-body {
-	background: url('http://www.demo.amitjakhu.com/login-form/images/bg.png');
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-	font-weight:300;
-	text-align: left;
-	text-decoration: none;
-	height: 500px;
+.contact_form li{
+	padding:12px; 
+	border-bottom:1px solid #eee;
+	position:relative;
+} 
+.contact_form li:first-child, .contact_form li:last-child {
+	border-bottom:1px solid #777;
 }
 
-#wrapper {
-	/* Center wrapper perfectly */
-	width: 300px;
-	height: 400px;
-	margin: 70px auto;
+/* === Form Header === */
+.contact_form h2 {
+	margin:0;
+	display: inline;
 }
-
-/* Download Button (Demo Only) */
-.download {
-	display: block;
-	position: absolute;
-	float: right;
-	right: 25px;
-	bottom: 25px;
-	padding: 5px;
-	
-	font-weight: bold;
-	font-size: 11px;
-	text-align: right;
-	text-decoration: none;
-	color: rgba(0,0,0,0.5);
-	text-shadow: 1px 1px 0 rgba(256,256,256,0.5);
-}
-
-.download:hover {
-	color: rgba(0,0,0,0.75);
-	text-shadow: 1px 1px 0 rgba(256,256,256,0.5);
-}
-
-.download:focus {
-	bottom: 24px;
-}
-
-/*
-.gradient {
-	width: 600px;
-	height: 600px;
-	position: fixed;
-	left: 50%;
-	top: 50%;
-	margin-left: -300px;
-	margin-top: -300px;
-	
-	background: url(http://www.demo.amitjakhu.com/login-form/images/gradient.png) no-repeat;
-}
-*/
-
-.gradient {
-	/* Center Positioning */
-	width: 600px;
-	height: 600px;
-	position: fixed;
-	left: 50%;
-	top: 50%;
-	margin-left: -300px;
-	margin-top: -300px;
-	z-index: -2;
-	
-	/* Fallback */ 
-	background-image: url(http://www.demo.amitjakhu.com/login-form/images/gradient.png); 
-	background-repeat: no-repeat; 
-	
-	/* CSS3 Gradient */
-	background-image: -webkit-gradient(radial, 0% 0%, 0% 100%, from(rgba(213,246,255,1)), to(rgba(213,246,255,0)));
-	background-image: -webkit-radial-gradient(50% 50%, 40% 40%, rgba(213,246,255,1), rgba(213,246,255,0));
-	background-image: -moz-radial-gradient(50% 50%, 50% 50%, rgba(213,246,255,1), rgba(213,246,255,0));
-	background-image: -ms-radial-gradient(50% 50%, 50% 50%, rgba(213,246,255,1), rgba(213,246,255,0));
-	background-image: -o-radial-gradient(50% 50%, 50% 50%, rgba(213,246,255,1), rgba(213,246,255,0));
-}
-
-/*******************
-LOGIN FORM
-*******************/
-
-.login-form {
-	width: 300px;
-	margin: 0 auto;
-	position: relative;
-	
-	background: #f3f3f3;
-	border: 1px solid #fff;
-	border-radius: 5px;
-	
-	box-shadow: 0 1px 3px rgba(0,0,0,0.5);
-	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
-	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
-}
-
-/*******************
-HEADER
-*******************/
-
-.login-form .header {
-	padding: 40px 30px 30px 30px;
-}
-
-.login-form .header h1 {
-	font-family: 'Bree Serif', serif;
-	font-weight: 300;
-	font-size: 28px;
-	line-height:34px;
-	color: #414848;
-	text-shadow: 1px 1px 0 rgba(256,256,256,1.0);
-	margin-bottom: 10px;
-}
-
-.login-form .header span {
-	font-size: 11px;
-	line-height: 16px;
-	color: #678889;
-	text-shadow: 1px 1px 0 rgba(256,256,256,1.0);
-}
-
-/*******************
-CONTENT
-*******************/
-
-.login-form .content {
-	padding: 0 30px 25px 30px;
-}
-
-/* Input field */
-.login-form .content .input {
-	width: 188px;
-	padding: 15px 25px;
-	
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-	font-weight: 400;
-	font-size: 14px;
-	color: #9d9e9e;
-	text-shadow: 1px 1px 0 rgba(256,256,256,1.0);
-	
-	background: #fff;
-	border: 1px solid #fff;
-	border-radius: 5px;
-	
-	box-shadow: inset 0 1px 3px rgba(0,0,0,0.50);
-	-moz-box-shadow: inset 0 1px 3px rgba(0,0,0,0.50);
-	-webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.50);
-}
-
-/* Second input field */
-.login-form .content .password, .login-form .content .pass-icon {
-	margin-top: 25px;
-}
-
-.login-form .content .input:hover {
-	background: #dfe9ec;
-	color: #414848;
-}
-
-.login-form .content .input:focus {
-	background: #dfe9ec;
-	color: #414848;
-	
-	box-shadow: inset 0 1px 2px rgba(0,0,0,0.25);
-	-moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.25);
-	-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.25);
-}
-
-.user-icon, .pass-icon {
-	width: 46px;
-	height: 47px;
-	display: block;
-	position: absolute;
-	left: 0px;
-	padding-right: 2px;
-	z-index: -1;
-	
-	-moz-border-radius-topleft: 5px;
-	-moz-border-radius-bottomleft: 5px;
-	-webkit-border-top-left-radius: 5px;
-	-webkit-border-bottom-left-radius: 5px;
-}
-
-.user-icon {
-	top:153px; /* Positioning fix for slide-in, got lazy to think up of simpler method. */
-	background: rgba(65,72,72,0.75) url(http://www.demo.amitjakhu.com/login-form/images/user-icon.png) no-repeat center;	
-}
-
-.pass-icon {
-	top:201px;
-	background: rgba(65,72,72,0.75) url(http://www.demo.amitjakhu.com/login-form/images/pass-icon.png) no-repeat center;
-}
-
-.content input:focus + div{
-	left: -46px;
-}
-
-/* Animation */
-.input, .user-icon, .pass-icon, .button, .register {
-	transition: all 0.5s ease;
-	-moz-transition: all 0.5s ease;
-	-webkit-transition: all 0.5s ease;
-	-o-transition: all 0.5s ease;
-	-ms-transition: all 0.5s ease;
-}
-
-/*******************
-FOOTER
-*******************/
-
-.login-form .footer {
-	padding: 25px 30px 40px 30px;
-	overflow: auto;
-	
-	background: #d4dedf;
-	border-top: 1px solid #fff;
-	
-	box-shadow: inset 0 1px 0 rgba(0,0,0,0.15);
-	-moz-box-shadow: inset 0 1px 0 rgba(0,0,0,0.15);
-	-webkit-box-shadow: inset 0 1px 0 rgba(0,0,0,0.15);
-}
-
-/* Login button */
-.login-form .footer .button {
+.required_notification {
+	color:#d45252; 
+	margin:5px 0 0 0; 
+	display:inline;
 	float:right;
-	padding: 11px 25px;
-	
-	font-family: 'Bree Serif', serif;
-	font-weight: 300;
-	font-size: 18px;
-	color: #fff;
-	text-shadow: 0px 1px 0 rgba(0,0,0,0.25);
-	
-	background: #56c2e1;
-	border: 1px solid #46b3d3;
-	border-radius: 5px;
-	cursor: pointer;
-	
-	box-shadow: inset 0 0 2px rgba(256,256,256,0.75);
-	-moz-box-shadow: inset 0 0 2px rgba(256,256,256,0.75);
-	-webkit-box-shadow: inset 0 0 2px rgba(256,256,256,0.75);
 }
 
-.login-form .footer .button:hover {
-	background: #3f9db8;
-	border: 1px solid rgba(256,256,256,0.75);
-	
-	box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
-	-moz-box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
-	-webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
+/* === Form Elements === */
+.contact_form label {
+	width:150px;
+	margin-top: 3px;
+	display:inline-block;
+	float:left;
+	padding:3px;
+}
+.contact_form input {
+	height:20px; 
+	width:220px; 
+	padding:5px 8px;
+}
+.contact_form textarea {padding:8px; width:300px;}
+.contact_form button {margin-left:156px;}
+
+	/* form element visual styles */
+	.contact_form input, .contact_form textarea { 
+		border:1px solid #aaa;
+		box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+		border-radius:2px;
+		padding-right:30px;
+		-moz-transition: padding .25s; 
+		-webkit-transition: padding .25s; 
+		-o-transition: padding .25s;
+		transition: padding .25s;
+	}
+	.contact_form input:focus, .contact_form textarea:focus {
+		background: #fff; 
+		border:1px solid #555; 
+		box-shadow: 0 0 3px #aaa; 
+		padding-right:70px;
+	}
+
+/* === HTML5 validation styles === */	
+.contact_form input:required, .contact_form textarea:required {
+	background: #fff url(images/red_asterisk.png) no-repeat 98% center;
+}
+.contact_form input:required:valid, .contact_form textarea:required:valid {
+	background: #fff url(images/valid.png) no-repeat 98% center;
+	box-shadow: 0 0 5px #5cd053;
+	border-color: #28921f;
+}
+.contact_form input:focus:invalid, .contact_form textarea:focus:invalid {
+	background: #fff url(images/invalid.png) no-repeat 98% center;
+	box-shadow: 0 0 5px #d45252;
+	border-color: #b03535
 }
 
-.login-form .footer .button:focus {
-	position: relative;
-	bottom: -1px;
-	
-	background: #56c2e1;
-	
-	box-shadow: inset 0 1px 6px rgba(256,256,256,0.75);
-	-moz-box-shadow: inset 0 1px 6px rgba(256,256,256,0.75);
-	-webkit-box-shadow: inset 0 1px 6px rgba(256,256,256,0.75);
+/* === Form hints === */
+.form_hint {
+	background: #d45252;
+	border-radius: 3px 3px 3px 3px;
+	color: white;
+	margin-left:8px;
+	padding: 1px 6px;
+	z-index: 999; /* hints stay above all other elements */
+	position: absolute; /* allows proper formatting if hint is two lines */
+	display: none;
 }
-
-/* Register button */
-.login-form .footer .register {
-	display: block;
-	float: right;
-	padding: 10px;
-	margin-right: 20px;
+.form_hint::before {
+	content: "\25C0";
+	color:#d45252;
+	position: absolute;
+	top:1px;
+	left:-6px;
+}
+.contact_form input:focus + .form_hint {display: inline;}
+.contact_form input:required:valid + .form_hint {background: #28921f;}
+.contact_form input:required:valid + .form_hint::before {color:#28921f;}
 	
-	background: none;
-	border: none;
-	cursor: pointer;
+/* === Button Style === */
+button.submit {
+	background-color: #68b12f;
+	background: -webkit-gradient(linear, left top, left bottom, from(#68b12f), to(#50911e));
+	background: -webkit-linear-gradient(top, #68b12f, #50911e);
+	background: -moz-linear-gradient(top, #68b12f, #50911e);
+	background: -ms-linear-gradient(top, #68b12f, #50911e);
+	background: -o-linear-gradient(top, #68b12f, #50911e);
+	background: linear-gradient(top, #68b12f, #50911e);
+	border: 1px solid #509111;
+	border-bottom: 1px solid #5b992b;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	box-shadow: inset 0 1px 0 0 #9fd574;
+	-webkit-box-shadow: 0 1px 0 0 #9fd574 inset ;
+	-moz-box-shadow: 0 1px 0 0 #9fd574 inset;
+	-ms-box-shadow: 0 1px 0 0 #9fd574 inset;
+	-o-box-shadow: 0 1px 0 0 #9fd574 inset;
+	color: white;
+	font-weight: bold;
+	padding: 6px 20px;
+	text-align: center;
+	text-shadow: 0 -1px 0 #396715;
+}
+button.submit:hover {
+	opacity:.85;
+	cursor: pointer; 
+}
+button.submit:active {
+	border: 1px solid #20911e;
+	box-shadow: 0 0 10px 5px #356b0b inset; 
+	-webkit-box-shadow:0 0 10px 5px #356b0b inset ;
+	-moz-box-shadow: 0 0 10px 5px #356b0b inset;
+	-ms-box-shadow: 0 0 10px 5px #356b0b inset;
+	-o-box-shadow: 0 0 10px 5px #356b0b inset;
 	
-	font-family: 'Bree Serif', serif;
-	font-weight: 300;
-	font-size: 18px;
-	color: #414848;
-	text-shadow: 0px 1px 0 rgba(256,256,256,0.5);
 }
-
-.login-form .footer .register:hover {
-	color: #3f9db8;
-}
-
-.login-form .footer .register:focus {
-	position: relative;
-	bottom: -1px;
-}
-
-/* Main Navigation */
-
-	#nav {
-
-	    position:relative;
-
-	    width:620px;
-
-	    margin:0 auto; 
-
-	    margin-top:50px;
-
-	    padding:10px;
-
-	}
-
-	ul#navigation {
-
-	    margin:0px auto;
-
-	    position:relative;
-
-	    float:left;
-
-	    border-left:1px solid #c4dbe7;
-
-	    border-right:1px solid #c4dbe7;
-
-	}
-
-	 
-
-	ul#navigation li {
-
-	    display:inline;
-
-	    font-size:12px;
-
-	    font-weight:bold;
-
-	    margin:0;
-
-	    padding:0;
-
-	    float:left;
-
-	    position:relative;
-
-	    border-top:1px solid #c4dbe7;
-
-	    border-bottom:2px solid #c4dbe7;
-
-	}
-
-	 
-
-	ul#navigation li a {
-
-	    padding:10px 25px;
-
-	    color:#616161;
-
-	    text-shadow:1px 1px 0px #fff;
-
-	    text-decoration:none;
-
-	    display:inline-block;
-
-	    border-right:1px solid #fff;
-
-	    border-left:1px solid #C2C2C2;
-
-	    border-top:1px solid #fff;
-
-	    background: #f5f5f5;
-
-	     
-
-	    -webkit-transition:color 0.2s linear, background 0.2s linear;   
-
-	    -moz-transition:color 0.2s linear, background 0.2s linear;  
-
-	    -o-transition:color 0.2s linear, background 0.2s linear;    
-
-	    transition:color 0.2s linear, background 0.2s linear;   
-
-	}
-
-	ul#navigation li a:hover {
-
-	    background:#f8f8f8;
-
-	    color:#282828;
-
-	}
-
-
-	ul#navigation li a.first {
-
-	    border-left: 0 none;
-
-	}
-
-	ul#navigation li a.last {
-
-	    border-right: 0 none;
-
-	}
-
-	ul#navigation li:hover > a {
-
-	    background:#fff;
-
-
-
