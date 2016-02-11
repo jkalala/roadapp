@@ -24,7 +24,7 @@ public function open_connection() {
 if ($this->conn->connect_error) {
     die("Connection failed: " . $this->conn->connect_error);
 } 
-echo "Connected successfully";
+echo "";
 
 $db_select = mysqli_select_db($this->conn, DB_NAME);
    if(!$db_select){
