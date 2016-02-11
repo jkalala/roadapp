@@ -1,0 +1,47 @@
+commit 0f92b2c87480dcbc314c0b8f9607e32ee3d9981a
+Author: jkalala <joaquim.kalala@gmail.com>
+Date:   Wed Feb 10 12:26:47 2016 +0100
+
+    update 6 styles.css
+
+commit f405528067275a43a1d307c606d64968eb778c7e
+Author: Joaquim Kalala <joaquim.kalala@gmail.com>
+Date:   Wed Feb 10 12:26:08 2016 +0100
+
+    stylesheet rename and update
+
+commit c1ee5b85d55f4cfcd6795fe867217efb2b027ecf
+Author: jkalala <joaquim.kalala@gmail.com>
+Date:   Wed Feb 10 12:17:29 2016 +0100
+
+    Update e rename syles.css to styles.css
+    
+    Addition on css nav
+
+commit 318c6ec317f5ac3624d1140ec884199a09235847
+Author: jkalala <joaquim.kalala@gmail.com>
+Date:   Tue Feb 9 13:02:25 2016 +0100
+
+    udpate3 styles
+
+commit e0d5274fefa741203eb8094df68ea8ca8d474826
+Author: jkalala <joaquim.kalala@gmail.com>
+Date:   Tue Feb 9 12:59:15 2016 +0100
+
+    update2
+    
+    forms
+
+commit d9b6f667ab047e31dd8fa8cd8dc6da11b978414b
+Author: jkalala <joaquim.kalala@gmail.com>
+Date:   Tue Feb 9 11:24:49 2016 +0100
+
+    Update stylesheet
+    
+    background color
+
+commit d0dc1fad4cdabcd29c3cf2f670541dd3e4b04e0b
+Author: Joaquim Kalala <joaquim.kalala@gmail.com>
+Date:   Tue Feb 9 11:21:29 2016 +0100
+
+    stysheet
